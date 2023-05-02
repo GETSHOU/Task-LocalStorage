@@ -72,3 +72,8 @@ body {
 	background: var(--button-background-hover);
 		color: var(--white-text);
 }
+
+h1 {
+	font-size: 24;
+	text-transform: uppercase;
+}
