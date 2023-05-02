@@ -1,21 +1,23 @@
 import './index.css';
+import CookieConsent from "./src/CookieConsent";
 
-const cookiesButton = document.querySelector('.cookie-consent__button');
+new CookieConsent(".cookie-consent");
 
-cookiesButton.addEventListener('click', (e) => {
-    e.preventDefault();
+// const cookiesButton = document.querySelector('.cookie-consent__button');
 
-    const { target } = e;
-    const cookiesBlock = target.closest('.cookie-consent');
+// cookiesButton.addEventListener('click', (e) => {
+//     e.preventDefault();
 
-    cookiesBlock.classList.add('hide');
+//     const { target } = e;
+//     const cookiesBlock = target.closest('.cookie-consent');
 
-    localStorage.setItem('cookies-state', 'accepted');
-});
+//     cookiesBlock.classList.add('hide');
 
-const cookiesBlock = document.querySelector('.cookie-consent');
+//     localStorage.setItem('cookies-state', 'accepted');
+// });
 
-if (localStorage.hasOwnProperty('cookies-state')) {
-    cookiesBlock.classList.add('hide');
-}
+// const cookiesBlock = document.querySelector('.cookie-consent');
 
+// if (localStorage.hasOwnProperty('cookies-state')) {
+//     cookiesBlock.classList.add('hide');
+// }
